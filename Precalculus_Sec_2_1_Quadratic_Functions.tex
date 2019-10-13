@@ -1,0 +1,203 @@
+\documentclass[12pt]{article}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+
+\usepackage{color}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\usepackage{listings}
+\lstset{language=bash,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  frame=single,
+  moredelim=[il][\textcolor{pgrey}]{$$},
+  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+
+\title{\textbf{Section 2.1 Quadratic Functions} \\
+\Quadratic Functions}
+\author{
+	John Stulich
+}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+$\underline{\text{Section 2.1 Quadratic Functions}}$
+
+$\underline{\text{General Form:}} \;\; ax^2 + bx + c, \;\; a \neq 0 $
+
+$\underline{\text{Standard Form:}} \;\; f(x) = a\left(x + \dfrac{b}{2a}\right)^2 + c - \dfrac{b^2}{4a}, \;\; a \neq 0 $
+
+$\underline{\text{Standard Form Expanded:}}$
+
+$a\left(x^2 + \dfrac{2bx}{2a} + \dfrac{b^2}{4a^2}\right) + c - \dfrac{b^2}{4a} \;\;\; \rightarrow \;\;\; ax^2 + \dfrac{2abx}{2a} + \dfrac{ab^2}{4a^2} + c - \dfrac{b^2}{4a} \;\;\; \rightarrow \;\;\; ax^2 + bx + \dfrac{b^2}{4a} + c - \dfrac{b^2}{4a} \;\;\; \rightarrow \;\;\; ax^2 + bx + \dfrac{b^2}{4a} - \dfrac{b^2}{4a} + c$
+
+$= ax^2 + bx + c, \;\; a \neq 0$
+
+$\text{Coordinates of the vertex of the graph of f:} \;\; \left(-\dfrac{b}{2a}, \;\; c - \dfrac{b^2}{4a} \right) \;\;\; \rightarrow \;\;\; \left(-\dfrac{b}{2a}, \;\; f\left(-\dfrac{b}{2a}\right) \right)$
+
+$\text{If a $>$ 0, f has a minimum at x} = -\dfrac{b}{2a}. \;\; \text{The minimum value is:} \;\; f\left(-\dfrac{b}{2a}\right)$
+
+$\text{If a $<$ 0, f has a maximum at x} = -\dfrac{b}{2a}. \;\; \text{The minimum value is:} \;\; f\left(-\dfrac{b}{2a}\right)$
+
+$\text{The equation of the axis of symmetry:} \;\; x + \dfrac{b}{2a} = 0$
+
+$\underline{\text{x-interceptions:}}$
+
+$\text{Consider the general form:} \;\; ax^2 + bx + c, \;\; a \neq 0 $
+
+$\text{[from the figure, if the quadratic function / parabola intersects the x-axis, then the y-coordinate is always zero]}$
+
+$\text{thus:} \;\; ax^2 + bx + c = 0$
+
+$\text{To find the x-coordinates, solve the equation:} \;\; ax^2 + bx + c = 0$
+
+$x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+
+$\text{Transforming} \;\; ax^2 + bx + c \;\; \text{into} \;\; x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \;\; :$
+
+$ax^2 + bx + c = 0, \;\; a \neq 0 $
+
+$\text{Complete the square:}$
+
+$x^2 + \dfrac{bx}{a} + \dfrac{c}{a} = 0, \;\; \text{divide the equation by a in order to ensure that $x^2$ has a coefficient of 1.}$
+
+$x^2 + \dfrac{bx}{a} + \left(\dfrac{b}{2a}\right)^2 - \left(\dfrac{b}{2a}\right)^2 + \dfrac{c}{a} = 0$
+
+$x^2 + \dfrac{bx}{a} + \left(\dfrac{b}{2a}\right)^2 = \left(\dfrac{b}{2a}\right)^2 - \dfrac{c}{a}$
+
+$\left(x + \dfrac{b}{2a}\right)^2 = \left(\dfrac{b}{2a}\right)^2 - \dfrac{c}{a} \;\;\; \rightarrow \;\;\; \sqrt{\left(x + \dfrac{b}{2a}\right)^2} = \pm \sqrt{\left(\dfrac{b}{2a}\right)^2 - \dfrac{c}{a}} \;\;\; \rightarrow \;\;\; x + \dfrac{b}{2a} = \pm \sqrt{\left(\dfrac{b}{2a}\right)^2 - \dfrac{c}{a}}$
+
+$x = -\dfrac{b}{2a} \pm \sqrt{\left(\dfrac{b}{2a}\right)^2 - \dfrac{c}{a}} \;\;\; \rightarrow \;\;\; x = -\dfrac{b}{2a} \pm \sqrt{\dfrac{b^2}{4a^2} - \dfrac{c}{a}} \;\;\; \rightarrow \;\;\; x = -\dfrac{b}{2a} \pm \sqrt{\dfrac{b^2}{4a^2} - \dfrac{4ac}{4a^2}}$
+
+$x = -\dfrac{b}{2a} \pm \sqrt{\dfrac{b^2 - 4ac}{4a^2}} \;\;\; \rightarrow \;\;\; x = -\dfrac{b}{2a} \pm \dfrac{\sqrt{b^2 - 4ac}}{\sqrt{4a^2}} \;\;\; \rightarrow \;\;\; x = -\dfrac{b}{2a} \pm \dfrac{\sqrt{b^2 - 4ac}}{2a}$
+
+$x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+
+$\text{Thus we have transformed} \;\; ax^2 + bx + c \;\; \text{into} \;\; x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+
+$x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \;\;\; :$
+
+$\text{If $b^2$ - 4ac $<$ 0, then there is no x-interception.}$
+
+$\text{If $b^2$ - 4ac = 0, then the parabola touches the x-axis coordinates of the point of contact at:} \left(-\dfrac{b}{2a}, 0 \right)$
+
+$\text{If $b^2$ - 4ac $>$ 0, then the parabola meets the x-axis at two distinct points.}$
+
+$\text{The coordinates / x-interceptions are:} \left(\dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a},\; 0 \right), \;\;\; \text{or} \;\;\; \left(\dfrac{-b + \sqrt{b^2 - 4ac}}{2a},\; 0 \right) \;\;\; \text{and} \;\;\; \left(\dfrac{-b - \sqrt{b^2 - 4ac}}{2a},\; 0 \right)$
+
+$\underline{\text{Example, page 120, problem 18:}}$
+
+$\text{General Form:} \;\; f(x) = x^2 + 16x + 61$
+
+$\text{a.) Convert to standard form:} \;\; f(x) = a\left(x + \dfrac{b}{2a}\right)^2 + c - \dfrac{b^2}{4a}, \;\; a \neq 0$
+
+$\text{a = 1, b = 16, c = 61}$
+
+$f(x) = \left(x + \dfrac{16}{2}\right)^2 + 61 - \dfrac{16^2}{4} \;\;\; \rightarrow \;\;\; f(x) = \left(x + 8 \right)^2 + 61 - \dfrac{(4^2)^2}{4} \;\;\; \rightarrow \;\;\; f(x) = \left(x + 8 \right)^2 + 61 - \dfrac{4^4}{4}$
+
+$\rightarrow f(x) = \left(x + 8 \right)^2 + 61 - 4^3 \;\;\; \rightarrow \;\;\; f(x) = \left(x + 8 \right)^2 + 61 - 64 \;\;\; \rightarrow \;\;\; f(x) = \left(x + 8 \right)^2 -3$
+
+$\text{thus, the standard form is:} \;\; f(x) = \left(x + 8 \right)^2 -3$
+
+$\text{b.) Find the vertext coordinates:} \;\;\; \left(-\dfrac{b}{2a}, \;\; c - \dfrac{b^2}{4a} \right)$
+
+$\text{a = 1, b = 16, c = 61}$
+
+$\left(-\dfrac{16}{2}, \;\; 61 - \dfrac{16^2}{4} \right) \;\;\; \rightarrow \;\;\; \left(-8, \;\; 61 - \dfrac{(4^2)^2}{4} \right) \;\;\; \rightarrow \;\;\; \left(-8, \;\; 61 - \dfrac{4^4}{4} \right) \;\;\; \rightarrow \;\;\; \left(-8, \;\; 61 - 4^3 \right) \;\;\; \rightarrow \;\;\; \left(-8, \;\; 61 - 64 \right)$
+
+$ \rightarrow \;\;\; \left(-8, -3 \right) \;\; \text{is the vertex}$
+
+$\text{Since a = 1 $>$ \;0, the vertex $\left(-8, -3 \right)$ is the minimum point of the graph of f.}$
+
+$\text{Equation of the axis of symmetry:} \;\; x + \dfrac{b}{2a} = 0 \;\; \rightarrow \;\; x + \dfrac{16}{2 \cdot 1} = 0 \;\; \rightarrow \;\; x + 8 = 0 \;\; \rightarrow \;\; x = -8$
+
+$\text{Find the x-interceptions:} \;\; \;\; \left(\dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a},\; 0 \right)$
+
+$\text{a = 1, b = 16, c = 61}$
+
+$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \;\; \rightarrow \;\; \dfrac{-16 \pm \sqrt{16^2 - 4 \cdot 1 \cdot 61}}{2 \cdot 1} \;\; \rightarrow \;\; \dfrac{-16 \pm \sqrt{256 - 244}}{2} \;\; \rightarrow \;\; \dfrac{-16 \pm \sqrt{12}}{2} \;\; \rightarrow \;\; \dfrac{-16 \pm 2\sqrt{3}}{2}$
+
+$x = -8 \pm \sqrt{3}$
+
+$\text{x-interceptions:} \;\; \left(-8 - \sqrt{3}, \;\; 0 \right) \;\;\; \text{and} \;\;\; \left(-8 + \sqrt{3}, \;\; 0 \right)$
+
+$\text{The vertex $\left(-8, -3 \right)$ is the point of minimum and the minimum value is - 3.}$
+
+$\underline{\text{Example:}} \;\; f(x) = -x^2 - 4x + 1$
+
+$\text{Convert to standard form:} \;\; f(x) = a\left(x + \dfrac{b}{2a}\right)^2 + c - \dfrac{b^2}{4a}, \;\; a \neq 0$
+
+$\text{a = -1, b = -4, c = 1}$
+
+$f(x) = - \left(x + \dfrac{(-4)}{-2} \right)^2 + 1 - \dfrac{(-4)^2}{-4} \;\;\; \rightarrow \;\;\; - \left(x + 2\right )^2 + 1 - \dfrac{16}{-4} \;\;\; \rightarrow \;\;\; - \left(x + 2\right )^2 + 1 + 4 \;\;\; \rightarrow \;\;\; - \left(x + 2\right )^2 + 5$
+
+$\text{thus:}$
+
+$f(x) = - \left(x + 2\right )^2 + 5 \;\;\; \text{or} \;\;\; f(x) = - \left(x^2 + 4x + 4 \right) + 5 \;\;\; \rightarrow \;\;\; -x^2 - 4x - 4 + 5 \;\;\; \rightarrow \;\;\; -x^2 - 4x + 1$
+
+$\text{Coordinates of the vertex of the graph of f:} \;\; \left(-\dfrac{b}{2a}\;, \;\; c - \dfrac{b^2}{4a} \right) \;\;\; \text{or} \;\;\; \left(-\dfrac{b}{2a}\;, \;\; f\left(-\dfrac{b}{2a}\right) \right)$
+
+$\left(-\dfrac{b}{2a}\;, \;\; c - \dfrac{b^2}{4a} \right) \;\;\; \rightarrow \;\;\; \left(-\dfrac{(-4)}{2(-1)}\;, \;\; 1 - \dfrac{(-4)^2}{4(-1)} \right) \;\;\; \rightarrow \;\;\; \left(-\dfrac{(4)}{2}\;, \;\; 1 - \dfrac{16}{-4} \right) \;\;\; \rightarrow \;\;\; \left(-2 \;, \;\; 1 + 4 \right) \;\;\; \rightarrow \;\;\; \left(-2 \;, 5 \right)$
+
+$\text{Since a = -1 $<$ \;0, the vertex $\left(-2, -5 \right)$ is the maximum point of the graph of f and the maximum value is 5.}$
+
+$\text{Equation of the axis of symmetry:} \;\; x + \dfrac{b}{2a} = 0 \;\; \rightarrow \;\; x + \dfrac{(-4)}{2(-1)} = 0 \;\; \rightarrow \;\; x + 2 = 0 \;\; \rightarrow \;\; x = -2$
+
+$\text{Find the x-interceptions:} \;\;\; \left(\dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a},\; 0 \right) \;\;\; \text{of} \;\;\; f(x) = -x^2 - 4x + 1$
+
+$\text{a = -1, b = -4, c = 1}$
+
+$x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} \;\; \rightarrow \;\; \dfrac{-(-4) \pm \sqrt{(-4)^2 - 4 \cdot (-1) \cdot (1)}}{2 \cdot (-1)} \;\; \rightarrow \;\; \dfrac{4 \pm \sqrt{16 + 4}}{-2} \;\; \rightarrow \;\; \dfrac{4 \pm \sqrt{20}}{-2} \;\; \rightarrow \;\; \dfrac{4 \pm 2\sqrt{5}}{-2}$
+
+$x = -2 \pm -\sqrt{5}$
+
+$\text{x-interceptions:} \;\; \left(-2 + \sqrt{5}, \;\; 0 \right) \;\;\; \text{and} \;\;\; \left(-2 - \sqrt{5}, \;\; 0 \right) \;\;\;\; \text{or} \;\;\;\; \left(\sqrt{5} -2, \;\; 0 \right) \;\;\; \text{and} \;\;\; \left(-(2 + \sqrt{5}), \;\; 0 \right)$
+
+$\underline{\text{Homework Problems:}}$
+
+$\text{Page 120: Exercises 15, 17, 19, 20, 23, 25 \;\;\; and \;\;\; Page 121: Exercises 38, 40, 42, 44}$
+
+$\newline$
+
+$\underline{\text{Different Type of Problem: Solve for the value of a}}$
+
+$\text{Write the standard form of the quadratic function with a vertex at $\left(5, 12 \right)$ and a point $\left(7, 15 \right)$ on the equation}$
+
+$\text{when x = 7 \;\; and y or f(x) = 15}$
+
+$f(x) = a\left(x - 5 \right)^2 + 12 \;\;\; \rightarrow \;\;\; 15 = a\left(7 - 5 \right)^2 + 12 \;\;\; \rightarrow \;\;\; 15 = a\left(2 \right)^2 + 12 \;\;\; \rightarrow \;\;\; 15 = 4a + 12 \;\;\; \rightarrow \;\;\; 3 = 4a$
+
+$a = \dfrac{3}{4} \;\;\; \text{plug value of a back into function: \;\;\; f(x) = a$\left(x - 5 \right)^2$ + 12}$
+
+$y \; = \; f(x) \; = \; \dfrac{3}{4} \left(x - 5 \right)^2 + 12$
+
+$\underline{\text{Example:}}$
+
+$\text{Vertex:} \;\; \left(-2, -2 \right) \;\; \text{at the point:} \;\; \left(-1, 0 \right)$
+
+$f(x) = a\left(x + 2 \right)^2 -2 \;\;\; \rightarrow \;\;\; 0 = a\left(-1 + 2 \right)^2 -2 \;\;\; \rightarrow \;\;\; 0 = a\left(1 \right)^2 -2 \;\;\; \rightarrow \;\;\; 0 = a -2 \;\;\; \rightarrow \;\;\; 2 = a$
+
+$\text{plug value of a back into function:} \;\;\; f(x) = a\left(x + 2 \right)^2 - 2 \;\;\; \rightarrow \;\;\; f(x) = 2\left(x + 2 \right)^2 - 2$
+
+$\underline{\text{Worksheet 4:}}$
+
+$2.) \;\;\; f(x) = - \dfrac{1}{2}\left(x-3\right)^2 + 4$
+
+$\text{Shift the graph horizontally 3 units to the right and and shift it vertically 4 units up.}$
+
+\end{document}
