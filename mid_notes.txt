@@ -1,0 +1,363 @@
+##############################
+Begin of Mid Notes
+##############################
+
+create:
+debian-s.....something
+
+000.000.00.000
+
+ssh root@000.000.00.000
+
+upgrade:
+sudo apt update && sudo apt upgrade
+
+apt install postgresql postgresql-contrib
+
+sudo -i -u postgres
+	now you are in postgres
+	postgres@postgres-server-b:~$
+
+createuser --interactive
+	role: test
+	super: y
+
+createdb test
+	make sure the name is the same as the role i.e. test
+
+exit
+	logout
+	back into root@postgres-server:~
+	root@postgres-server-b:~#
+
+adduser test
+	make sure the name is the same as the role and db name
+
+leave info boxes blank
+
+sudo -i -u test
+	now you are in the postgres prompt (green)
+
+psql
+	new prompt
+	test=#
+
+\conninfo
+	You are connected to database "test" as user "test" via socket in "/var/run/postgresql" at port "5432".
+
+\q
+	exit the database if needed
+
+### Creating the TABLE
+
+CREATE TABLE students (
+id		int PRIMARY KEY,
+first_name     	varchar(25) NOT NULL,
+last_name      	varchar(25) NOT NULL);
+
+
+\dt
+	displays the list of relations
+
+INSERT INTO students (id, first_name, last_name)
+VALUES (0111240, 'John', 'Stulich');
+
+INSERT INTO students (id, first_name, last_name)
+VALUES (0365512, 'Napoleon', 'Santana');
+
+
+SELECT * FROM students;
+	displays contents of store database
+
+\dt
+
+CREATE TABLE favorite_movie (
+uniq_Id			int PRIMARY KEY,
+fav_movie_name  	varchar(25) NOT NULL,
+student_id		int NOT NULL,
+FOREIGN KEY (student_id) REFERENCES students (id)
+);
+
+SELECT * FROM favorite_movie;
+	displays contents of favorite_movie database
+
+INSERT INTO favorite_movie (uniq_id, fav_movie_name, student_id)
+VALUES(1,'Dark City',0111240);
+
+INSERT INTO favorite_movie (uniq_id, fav_movie_name, student_id)
+VALUES(2,'Back to the Future',0365512);
+
+
+SELECT * FROM favorite_movie;
+	displays contents of favorite_movie database
+
+## Inner Join - Begin ##
+
+SELECT
+
+	students.id,
+	favorite_movie.student_id,
+	students.first_name,
+	students.last_name,
+	favorite_movie.fav_movie_name
+
+FROM
+
+	students
+
+INNER JOIN
+
+	favorite_movie
+
+ON
+	students.id = favorite_movie.student_id;
+
+## Inner Join - End ##
+
+SELECT * FROM students;
+SELECT * FROM favorite_movie;
+
+test=# \q
+
+test@postgres-server-b:~$ exit
+
+logout
+	go back to Linux main command prompt
+	don't logout if you dont need to at the moment
+
+sudo -i -u postgres
+sudo -i -u test
+
+Back in root
+	
+root@debian-s.....something:~# 
+
+###################################
+##### Find and modify 2 files #####
+
+#### postgresql.conf
+
+find / -name postgresql.conf
+
+	# Modify the file:
+	/etc/postgresql/11/main/postgresql.conf
+
+	/usr/lib/tmpfiles.d/postgresql.conf
+		leave alone
+
+cd /etc/postgresql/11/main/
+	vim postgresql.conf
+
+
+? in vim lets you search for a term
+
+change the line:
+
+#listen_addresses = 'localhost'
+
+to:
+
+listen_addresses = '*'
+	make sure to remove the hashtag
+
+#### pg_hba.conf
+
+find / -name pg_hba.conf
+
+	# Modify:
+	/etc/postgresql/11/main/pg_hba.conf
+
+cd /etc/postgresql/11/main
+	 vim pg_hba.conf
+
+add this line to the bottom of the file:
+
+host	all	all	0.0.0.0/0	md5
+
+# Restart postgres
+
+service postgresql restart
+
+exit
+	exit back to your laptop command prompt
+
+my newly created database:
+psql -h 000.000.00.000 -p 5432 -U test
+
+change paswword while in psql
+psql, then \password
+
+If modifying the ssh keys:
+while in root@debian-s
+sudo service ssh restart
+	restart your ssh server
+
+For Reference:
+
+ssh root@000.000.00.000
+
+sudo -i -u postgres
+sudo -i -u test
+
+
+##############################
+End of Mid Notes
+##############################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
