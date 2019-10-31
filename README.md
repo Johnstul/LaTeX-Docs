@@ -7,4 +7,4 @@ LaTeX code originally generated on the free TeXeR online application from the Ar
 
 https://artofproblemsolving.com/texer
 
-.tex files need to be converted to proper LaTeX format.
+.tex files need to be converted and edited to proper LaTeX format (don't try to run them as .tex files).
